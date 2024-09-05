@@ -1,6 +1,5 @@
 <?php
 session_start();
-// print_r($_SESSION);
 
 if ((!isset($SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
 {   

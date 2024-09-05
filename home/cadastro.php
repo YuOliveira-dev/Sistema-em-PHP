@@ -2,18 +2,6 @@
   if(isset($_POST['submit'])) {
     
     include_once('config.php');
-
-    $query = "SELECT * FROM usuarios"; 
-    
-    $result = mysqli_query($conexao, $query);
-
-   if ($result) {
-    echo 'Deu certo aqui po';
-   }else {
-    echo 'Deu errado de novo mano';
-   }
-
-    
     
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -29,12 +17,6 @@
 
     header('Location: login.php');
 
-    // Verificar o resultado da consulta
-    // if($result) {
-    //     echo "Dados inseridos com sucesso!";
-    // } else {
-    //     echo "Erro ao inserir dados: " . mysqli_error($conexao);
-    // }
   }
 
   
