@@ -30,8 +30,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="back">
-        <a class="backButton" href=".././home.php">Voltar</a>
+    <div id="back-2">
+        <a class="backButton" href="./login.php">Voltar</a>
     </div>
     <main>
       <div class="box">

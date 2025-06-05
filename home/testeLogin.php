@@ -1,13 +1,13 @@
 <?php
 session_start();
 if (isset($_POST ['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
-    // acessa 
+    
     include_once('./config.php');
         $email = $_POST['email'];
         $senha = $_POST['senha'];
     
         
-        // Manda pro banco de dados verificando se existe a senha e o e-mail no banco de dados
+        
         $sql = "SELECT * FROM usuarios WHERE email = '$email' and senha = '$senha'";
 
         $result = $conexao->query($sql);
