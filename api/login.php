@@ -9,7 +9,7 @@
 <body> 
     <main>
     <div class="back">
-        <a class="backButton" href="./home.php">Inicio</a>
+        <a class="backButton" href="../index.php">Inicio</a>
     </div> 
     <div id="container">
         <h1>Login</h1>
