@@ -15,4 +15,5 @@ WORKDIR /usr/src/app
 COPY . .
 
 
-CMD ["php", "index.php"]
+CMD ["php", "-S", "0.0.0.0:3000", "-t", "."]
+
