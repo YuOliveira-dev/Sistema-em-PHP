@@ -1,25 +1,23 @@
 <?php
-  if(isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
+    $nome = $_POST['nome'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $telefone = $_POST['telefone'] ?? '';
+    $sexo = $_POST['genero'] ?? '';
+    $data_nasc = $_POST['data_nascimento'] ?? '';
+    $cidade = $_POST['cidade'] ?? '';
+    $estado = $_POST['estado'] ?? '';
+    $endereco = $_POST['endereco'] ?? '';
+
     
-    include_once('config.php');
-    
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
-    $sexo = $_POST['genero'];
-    $data_nasc = $_POST['data_nascimento'];
-    $cidade = $_POST['cidade'];
-    $estado = $_POST['estado'];
-    $endereco = $_POST['endereco'];
-
-    // Executar a consulta
-    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereco) VALUES ('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
-
-    header('Location: login.php');
-
-  }
-
-  
+    if (!$nome || !$senha || !$email) {
+        $erro = "Por favor, preencha os campos obrigatórios.";
+    } else {
+        
+        $mensagem = "Dados recebidos com sucesso! Obrigado pelo cadastro, $nome.";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -27,7 +25,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
     <div id="back-2">
