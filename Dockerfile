@@ -1,10 +1,18 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
+
+RUN apt-get update && apt-get install -y \
+    libsqlite3-dev \
+    pkg-config \
+    unzip \
+    curl \
+    git \
+    && docker-php-ext-install pdo pdo_sqlite
 
 
-RUN docker-php-ext-install pdo pdo_sqlite
+WORKDIR /usr/src/app
 
 
-COPY . /var/www/html/
+COPY . .
 
 
-RUN chmod -R 777 /var/www/html/database.sqlite || true
+CMD ["php", "index.php"]

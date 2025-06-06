@@ -11,8 +11,8 @@
    <section class="c-s-h">
        <div class="c-b-h">
            <h1 class="t-s-h">Página de login e cadastro em PHP</h1>
-           <a class="btn-login" href="./login.php">Login</a>
-           <a class="btn-sign" href="./cadastro.php">Cadastre-se</a>
+           <a class="btn-login" href="./api/login.php">Login</a>
+           <a class="btn-sign" href="./api/cadastro.php">Cadastre-se</a>
         </div>
     </section>
 </body>
